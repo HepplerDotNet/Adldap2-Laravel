@@ -12,6 +12,7 @@ use Adldap\Laravel\Events\AuthenticationFailed;
 use Adldap\Laravel\Auth\NoDatabaseUserProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Arr;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Auth\Authenticatable;
 
