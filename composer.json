@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.1",
-        "hepplerdotnet/adldap2": "^9.0"
+        "adldap2/adldap2": "^9.0"
     },
     "require-dev": {
         "mockery/mockery": "~1.0",
