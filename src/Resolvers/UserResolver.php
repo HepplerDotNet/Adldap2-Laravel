@@ -182,7 +182,7 @@ class UserResolver implements ResolverInterface
      */
     protected function getPasswordFromCredentials($credentials)
     {
-        return array_get($credentials, 'password');
+        return Arr::get($credentials, 'password');
     }
 
     /**

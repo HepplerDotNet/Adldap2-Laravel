@@ -12,6 +12,7 @@ use Adldap\Laravel\Commands\Import as ImportUser;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;
 
 class Import extends Command
@@ -345,7 +346,7 @@ class Import extends Command
     {
         // Retrieve all of the configured authentication providers that
         // use the LDAP driver and have a configured model.
-        $providers = array_where(Config::get('auth.providers'), function ($value, $key) {
+        $providers = Arr::where(Config::get('auth.providers'), function ($value, $key) {
             return $value['driver'] == 'ldap' && array_key_exists('model', $value);
         });
 
