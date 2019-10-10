@@ -10,6 +10,7 @@ use Adldap\Connections\ConnectionInterface;
 use Illuminate\Container\Container;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class AdldapServiceProvider extends ServiceProvider
 {
@@ -158,6 +159,6 @@ class AdldapServiceProvider extends ServiceProvider
      */
     protected function isLumen()
     {
-        return str_contains($this->app->version(), 'Lumen');
+        return Str::contains($this->app->version(), 'Lumen');
     }
 }
